@@ -1,0 +1,250 @@
+:root {
+    --primary-green: #182823;       /* Main brand color */
+    --secondary-green: #2A423D;     /* Darker green accent */
+    --accent-tan: #D8CBB5;          /* Warm tan for accents */
+    --neutral-beige: #F5F3EE;       /* Light background */
+    --text-dark: #1A1A1A;           /* Primary text color */
+    --text-light: #FFFFFF;          /* Light text color */
+    --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background-color: var(--neutral-beige);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    padding: 1.5rem 2rem;
+    background: var(--text-light);
+    border-bottom: 3px solid var(--primary-green);
+    text-align: center;
+}
+
+.logo {
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 1rem;
+    background: var(--primary-green);
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+    font-weight: 300;
+}
+
+.cta-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.service-card {
+    background: var(--text-light);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(24, 40, 35, 0.15);
+}
+
+.icon-container {
+    background: rgba(24, 40, 35, 0.05);
+    border-radius: 50%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    width: max-content;
+}
+
+.service-features {
+    list-style: none;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--neutral-beige);
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.contact-card {
+    background: var(--neutral-beige);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.contact-card.highlight {
+    background: var(--primary-green);
+    color: var(--text-light);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-green);
+    color: var(--text-light);
+    padding: 3rem 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent-tan);
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--primary-green);
+    color: var(--text-light);
+    border: 2px solid var(--primary-green);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border-color: var(--text-light);
+}
+
+.cta-button:hover {
+    background: var(--secondary-green);
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-container {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        max-width: 100%;
+    }
+}
