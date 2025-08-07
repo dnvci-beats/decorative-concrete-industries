@@ -1,0 +1,1 @@
+this is the website for Schofield land management website for public, real world usage hosted thru GitHub pages 
