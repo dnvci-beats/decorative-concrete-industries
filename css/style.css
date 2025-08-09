@@ -1,8 +1,8 @@
 :root {
-    --primary-green: #182823;       /* Main brand color */
-    --secondary-green: #2A423D;     /* Darker green accent */
-    --accent-tan: #D8CBB5;          /* Warm tan for accents */
-    --neutral-beige: #F5F3EE;       /* Light background */
+    --primary-gray: #333;           /* Main brand color */
+    --secondary-gray: #555;         /* Darker gray accent */
+    --accent-blue: #007BFF;         /* A splash of color */
+    --neutral-light: #f4f4f4;       /* Light background */
     --text-dark: #1A1A1A;           /* Primary text color */
     --text-light: #FFFFFF;          /* Light text color */
     --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -23,7 +23,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.7;
     color: var(--text-dark);
-    background-color: var(--neutral-beige);
+    background-color: var(--neutral-light);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -33,22 +33,22 @@ body {
 header {
     padding: 1.5rem 2rem;
     background: var(--text-light);
-    border-bottom: 3px solid var(--primary-green);
+    border-bottom: 3px solid var(--primary-gray);
     text-align: center;
 }
 
 .logo {
-    max-width: 320px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-gray);
+    text-decoration: none;
 }
 
 /* Hero Section */
 .hero {
     padding: 6rem 1rem;
-    background: var(--primary-green);
-    color: var(--text-light);
+    background: url('https://upload.wikimedia.org/wikipedia/commons/1/15/Textured_Concrete_Wall.jpg') no-repeat center center/cover;
+    color: var(--text-dark);
     text-align: center;
     position: relative;
 }
@@ -79,7 +79,7 @@ header {
 
 .section-title {
     font-size: 2rem;
-    color: var(--primary-green);
+    color: var(--primary-gray);
     margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -105,11 +105,12 @@ header {
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(24, 40, 35, 0.15);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
 .icon-container {
-    background: rgba(24, 40, 35, 0.05);
+    background: var(--accent-blue);
+    color: var(--text-light);
     border-radius: 50%;
     padding: 1.5rem;
     margin: 1rem auto;
@@ -124,7 +125,7 @@ header {
 
 .service-features li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid var(--neutral-beige);
+    border-bottom: 1px solid var(--neutral-light);
 }
 
 /* Contact Section */
@@ -147,14 +148,14 @@ header {
 }
 
 .contact-card {
-    background: var(--neutral-beige);
+    background: var(--neutral-light);
     padding: 2rem;
     border-radius: 12px;
     transition: var(--transition);
 }
 
 .contact-card.highlight {
-    background: var(--primary-green);
+    background: var(--primary-gray);
     color: var(--text-light);
 }
 
@@ -168,7 +169,7 @@ header {
 
 /* Footer */
 footer {
-    background: var(--primary-green);
+    background: var(--primary-gray);
     color: var(--text-light);
     padding: 3rem 1rem;
     margin-top: auto;
@@ -178,11 +179,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-}
-
-.footer-logo {
-    max-width: 200px;
-    margin-bottom: 1.5rem;
 }
 
 .social-links {
@@ -198,7 +194,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: var(--accent-tan);
+    color: var(--accent-blue);
 }
 
 /* Buttons */
@@ -207,9 +203,9 @@ footer {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 2rem;
-    background: var(--primary-green);
+    background: var(--accent-blue);
     color: var(--text-light);
-    border: 2px solid var(--primary-green);
+    border: 2px solid var(--accent-blue);
     border-radius: 8px;
     font-weight: 600;
     transition: var(--transition);
@@ -218,11 +214,12 @@ footer {
 
 .cta-button.secondary {
     background: transparent;
-    border-color: var(--text-light);
+    border-color: var(--text-dark);
+    color: var(--text-dark);
 }
 
 .cta-button:hover {
-    background: var(--secondary-green);
+    background: var(--secondary-gray);
     transform: translateY(-2px);
 }
 
